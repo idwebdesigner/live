@@ -9,7 +9,7 @@
         playerInfo: false
       });
 
-      $('.not-prettyy').fitVids();
+      $('.not-prettyyy').fitVids();
 
       $('.not-pretty').prettyEmbed({
         videoID: '5eZ2rHa0Na0',
