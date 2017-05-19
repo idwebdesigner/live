@@ -32,7 +32,7 @@ h1 {
   display: inline-block;
 }
 h1:before {
-  content: 'Now v1.2.1!';
+  content: 'Live Now! ;)';
   display: block;
   position: absolute;
   top: 100%;
