@@ -1,37 +1,32 @@
-// Initial set up video
-var player;
-
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('video-bg', {
-        videoId: 'ab0TSkLe-E0',
-        playerVars: {
-            playlist: 'ab0TSkLe-E0',
-            autoplay: 1,
-            loop: 1,
-            color: 'white',
-            controls: 0,
-            showinfo: 0
-        },
-        events: {
-            onReady: initialize
-        }
-    });
+// Loop selectors
+var videos = document.querySelectorAll(".youtube");  
+for (var i=0; i<videos.length; i++) {
+  var youtube = videos[i];
+  // Get function
+  getVideos(youtube);
 }
 
-function initialize() {
-    player.mute();
+// Get videos function
+function getVideos(el){
+  var img = document.createElement("img");
+  // Get images
+  img.setAttribute('src', 'http://i.ytimg.com/vi/'+el.id+'/hqdefault.jpg');
+  // Add class to img
+  img.setAttribute('class', 'thumb');
+  // Make div to embed videos
+  var video = document.createElement("div");
+  // Remove this if you like
+  video.setAttribute("class","video_here");  
+  // Insert tags
+  el.appendChild(img);
+  el.appendChild(video);
+  // On click get video
+  el.addEventListener('click',function(){ 
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute('class','youtube_video');
+    iframe.setAttribute('src','http://www.youtube.com/embed/'+
+    this.id +'?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1'); 
+    // Remplace img for video
+    this.parentNode.replaceChild(iframe, this);
+  },false);  
 }
-
-// Custom control
-$('.video-bg-sound').on('click', function() {
-
-    var muteToggle = $(this);
-
-    if (player.isMuted()) {
-        player.unMute();
-        muteToggle.html('Turn music off');
-    } else {
-        player.mute();
-        muteToggle.html('urn music on');
-    }
-});
