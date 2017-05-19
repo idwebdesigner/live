@@ -2,14 +2,22 @@
     $(document).ready(function() {
 
       $('#test-video').prettyEmbed({
-        videoID: 'Cbti19KM3wk',
+        videoID: 'fxhxuN7O64k',
         useFitVids: true,
 
         playerControls: false,
         playerInfo: false
       });
 
-      $('.not-pretty').fitVids();
+      $('.not-prettyy').fitVids();
+
+      $('.not-pretty').prettyEmbed({
+        videoID: 'fxhxuN7O64k',
+        useFitVids: true,
+
+        playerControls: false,
+        playerInfo: false
+      });
 
     });
   })(jQuery);
