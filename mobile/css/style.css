@@ -1,0 +1,7 @@
+.video-bg-wrapper {
+    z-index: -1;
+}
+.video-bg-sound {
+    margin: 20px;
+    cursor: pointer;
+}
