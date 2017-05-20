@@ -2,7 +2,7 @@
     $(document).ready(function() {
 
       $('#test-video').prettyEmbed({
-        videoID: '5eZ2rHa0Na0',
+        videoID: 'f-quOt2YkDM',
         useFitVids: true,
 
         playerControls: false,
@@ -12,7 +12,7 @@
       $('.not-prettyyy').fitVids();
 
       $('.not-pretty').prettyEmbed({
-        videoID: '5eZ2rHa0Na0',
+        videoID: 'f-quOt2YkDM',
         useFitVids: true,
 
         playerControls: false,
